@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="A responsive homepage with a modern navigation bar.">
+    <title>Company Homepage</title>
+
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        
+        nav {
+            background-color: #2c3e50;
+            width: 100%;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+      
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            display: block;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        
+        nav ul li a:hover {
+            background-color: #e74c3c;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        
+        nav ul li a.active {
+            background-color: #3498db;
+            color: white;
+        }
+
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            width: 30px;
+            height: 21px;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            background-color: white;
+            height: 4px;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                text-align: center;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                padding: 10px 0;
+            }
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#" style="color: white; font-size: 1.5em; text-decoration: none;">Cyber chef</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Our Company!</h2>
+        <p>We are a cyber security company.We protect people's privacy .</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>This is the about section. Information about the company goes here.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Details about the services your company provides.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Showcase images and portfolios here.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>How visitors can contact your company.</p>
+    </section>
+
+    <script>
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+        const links = document.querySelectorAll('.nav-link');
+
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                links.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
