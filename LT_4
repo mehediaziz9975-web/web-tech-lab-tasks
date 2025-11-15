@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mehedi Hasan Aziz">
+    <meta name="description" content="TasteHub Restaurant - Digital Menu including Starters, Main Course, Desserts, Drinks, and Chef Specials.">
+    <title>TasteHub Restaurant - Menu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        aside {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        aside h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        aside li {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        li {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        li img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        strong {
+            font-size: 1.2em;
+            color: #e74c3c;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            li {
+                max-width: 80%;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+
+            aside {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 0 8px;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                max-width: 100%;
+                margin: 5px 0;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+
+            aside h3 {
+                font-size: 1.2em;
+            }
+
+            aside li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header>
+        <img src="https://i.ibb.co/2dRgx8f/restaurant-logo.png" alt="TasteHub Logo">
+
+        <h1>TasteHub Restaurant</h1>
+        <p><em>Deliciousness Delivered Fresh Every Day!</em></p>
+        <nav>
+            <a href="#starters">Starters</a>
+            <a href="#maincourse">Main Course</a>
+            <a href="#desserts">Desserts</a>
+            <a href="#drinks">Drinks</a>
+            <a href="#specials">Chef’s Specials</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h3>Today's Special Offers</h3>
+            <ul>
+                <li>10% Off on All Desserts!</li>
+                <li>Buy 1 Get 1 Free Coffee</li>
+                <li>Combo Meal Discount: Save $5</li>
+            </ul>
+        </aside>
+        <section id="specials">
+            <fieldset>
+                <legend><strong>Chef’s Special</strong></legend>
+
+                <article>
+                    <h3>🔥 Dragon Fire Steak — $24.99</h3>
+                    <p>Premium beef grilled with spicy chili glaze, served with herb potatoes.</p>
+                    <img src="https://i.ibb.co/Z6SN8Y6/steak.jpg" alt="Dragon Fire Steak">
+                </article>
+                <hr>
+
+                <article>
+                    <h3>🍤 Royal Garlic Butter Shrimp — $19.99</h3>
+                    <p>Fresh jumbo shrimp sautéed in creamy garlic butter sauce.</p>
+                    <img src="https://i.ibb.co/tH6tV2k/shrimp.jpg" alt="Garlic Shrimp">
+                </article>
+                <hr>
+
+                <article>
+                    <h3>🍝 Truffle Alfredo Pasta — $17.49</h3>
+                    <p>Silky fettuccine tossed in truffle-infused cream sauce.</p>
+                    <img src="https://i.ibb.co/g6Fx7Zv/pasta.jpg" alt="Truffle Alfredo Pasta">
+                </article>
+            </fieldset>
+
+            <p><a href="#top">Back to Top</a></p>
+        </section>
+
+        <hr>
+        <section id="starters">
+            <h2>Starters</h2>
+
+            <ul>
+                <li>
+                    <article>
+                        <strong>Chicken Caesar Bites — $8.99</strong>
+                        <p>Crispy chicken pieces served with Caesar dip.</p>
+                        <img src="https://i.ibb.co/nnw6Vn3/caesar.jpg" alt="Chicken Caesar Bites">
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <strong>Cheesy Garlic Bread — $5.49</strong>
+                        <p>Freshly baked garlic bread topped with mozzarella cheese.</p>
+                        <img src="https://i.ibb.co/dgM1pCn/garlicbread.jpg" alt="Cheesy Garlic Bread">
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <strong>Spicy Tomato Soup — $6.25</strong>
+                        <p>Rich tomato soup with a hint of spice.</p>
+                        <img src="https://i.ibb.co/XWr6km4/soup.jpg" alt="Tomato Soup">
+                    </article>
+                </li>
+            </ul>
+
+            <p><a href="#top">Back to Top</a></p>
+            <hr>
+        </section>
+        <section id="maincourse">
+            <h2>Main Course</h2>
+
+            <ul>
+                <li>
+                    <article>
+                        <strong>Grilled Chicken Platter — $14.99</strong>
+                        <p>Juicy grilled chicken served with veggies and rice.</p>
+                        <img src="https://i.ibb.co/1Q0NmTC/grilled-chicken.jpg" alt="Grilled Chicken">
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <strong>Beef Burger Deluxe — $11.49</strong>
+                        <p>Served with fries and homemade sauce.</p>
+                        <img src="https://i.ibb.co/6vn0h4f/burger
