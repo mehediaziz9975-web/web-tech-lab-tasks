@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+      
+        #about-section {
+            background-color: #f4c2c2;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        #education-section {
+            background-color: #c2e0f4;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        #hobby-section {
+            background-color: #c2f4d4;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        hr.custom-line {
+            border: none;
+            height: 4px;
+            background-color: #555;
+            width: 80%;
+            margin: 30px auto;
+        }
+
+      
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="about-section">
+        <h2 class="section-title">About Me</h2>
+        <p>Hello! My name is <strong>Mehedi Hasan Aziz</strong>. I am a student who enjoys learning new things, exploring
+            technology, and building small projects. I like keeping things simple and improving step by step.</p>
+        <p style="color: blue;">This line uses an inline style as required.</p>
+    </div>
+
+    <hr class="custom-line">
+
+  
+    <div id="education-section">
+        <h2 class="section-title">Education</h2>
+        <p>I completed my schooling from Feni Government pilot School and I am currently pursuing my higher studies. I enjoy subjects like
+            Computer Science, Mathematics, and English.</p>
+        <p>My goal is to continue improving my skills and gain practical knowledge in web development.</p>
+    </div>
+
+    <hr class="custom-line">
+
+    <div id="hobby-section">
+        <h2 class="section-title">Hobbies</h2>
+        <p>In my free time, I love doing several activities:</p>
+        <ul>
+            <li>Playing  games</li>
+            <li>Listening to music</li>
+            <li>Cooking simple dishes like biriyani</li>
+            <li>Learning new programming languages </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
